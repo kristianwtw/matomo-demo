@@ -13,16 +13,18 @@ function Navigation(){
 
 const Layout = (props) =>{
 	let location = useLocation();
+	let pageTitle = `${props.title} - Matomo Demo`;
 
 	useEffect(() => {
-		console.log('New page view');
+		console.log('New page view with title');
+		window._paq.push(['setDocumentTitle', pageTitle]);
 		window._paq.push(['trackPageView']);
-	}, [location]);
+	}, [location, pageTitle]);
 
 	return (
 		<div className="App">
 			<Helmet>
-				<title>{props.title} - Matomo Demo</title>
+				<title>{pageTitle}</title>
 			</Helmet>
 			<header className="App-header">
 				<Navigation />
