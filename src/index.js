@@ -7,17 +7,17 @@ import Contact from "./Contact";
 
 const router = createBrowserRouter([
 	{
-		path: "*",
+		path: "/",
 		element: <App />
 	},
 	{
 		path: "/contact",
 		element: <Contact />
 	},
-]);
+], {
+	basename: '/matomo-demo'
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>
+	<RouterProvider router={router} />
 );
