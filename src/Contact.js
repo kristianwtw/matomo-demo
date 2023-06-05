@@ -1,7 +1,7 @@
 import {useState} from "react";
+import Layout from "./Layout";
 
-export default function ContactForm(){
-
+function ContactForm(){
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
 	function onSubmit(e){
@@ -21,5 +21,11 @@ export default function ContactForm(){
 			<button type="submit">Submit</button>
 		</form>
 	}
+}
 
+export default function Contact(){
+	return <Layout>
+		<h1>Contact Us</h1>
+		<ContactForm />
+	</Layout>
 }

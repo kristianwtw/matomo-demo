@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+nav{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a.active{
+    text-decoration: underline;
+}
