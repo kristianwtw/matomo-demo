@@ -18,7 +18,6 @@ const Layout = (props) =>{
 	useEffect(() => {
 		console.log('New page view with title');
 		window._paq.push(['setDocumentTitle', pageTitle]);
-		window._paq.push(['trackPageView']);
 	}, [location, pageTitle]);
 
 	return (
