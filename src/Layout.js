@@ -1,5 +1,5 @@
-import React from 'react';
-import {NavLink} from "react-router-dom";
+import React, {useEffect} from 'react';
+import {NavLink, useLocation} from "react-router-dom";
 import {Helmet} from "react-helmet";
 
 function Navigation(){
@@ -12,6 +12,13 @@ function Navigation(){
 }
 
 const Layout = (props) =>{
+	let location = useLocation();
+
+	useEffect(() => {
+		console.log('New page view');
+		window._paq.push(['trackPageView']);
+	}, [location]);
+
 	return (
 		<div className="App">
 			<Helmet>
