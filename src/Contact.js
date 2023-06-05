@@ -24,7 +24,7 @@ function ContactForm(){
 }
 
 export default function Contact(){
-	return <Layout>
+	return <Layout title="Contact">
 		<h1>Contact Us</h1>
 		<ContactForm />
 	</Layout>
