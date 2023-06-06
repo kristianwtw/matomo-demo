@@ -7,8 +7,11 @@ function DynamicAnalytics(props){
 	useEffect(() => {
 		document.title = props.title;
 		console.log('Dynamic route change: ', props.title);
+		/*
 		window._paq.push(['setDocumentTitle', props.title]);
 		window._paq.push(['trackPageView']);
+
+		 */
 
 	}, [location, props.title]);
 }
