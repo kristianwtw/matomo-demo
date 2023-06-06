@@ -6,9 +6,8 @@ export default function WithAnalytics(props){
 
 	useEffect(() => {
 		document.title = props.title;
-		console.log('Dynamic route change: ', props.title);
-		window._paq.push(['setDocumentTitle', props.title]);
-		window._paq.push(['trackPageView']);
+		console.log('Dynamic route change: ', document.title);
+		window._mtm.push({'event': 'mtm.PageView'});
 
 	}, [location, props.title]);
 

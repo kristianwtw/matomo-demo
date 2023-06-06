@@ -1,6 +1,5 @@
 import {useState} from "react";
 import Layout from "./Layout";
-import WithAnalytics from "./Analytics";
 
 function ContactForm(){
 	const [isSubmitted, setIsSubmitted] = useState(false);
@@ -25,10 +24,8 @@ function ContactForm(){
 }
 
 export default function Contact(){
-	return <WithAnalytics title="Contact - Matomo Demo">
-		<Layout title="Contact - Matomo Demo">
+	return <Layout title="Contact - Matomo Demo">
 			<h1>Contact Us</h1>
 			<ContactForm />
 		</Layout>
-	</WithAnalytics>
 }
