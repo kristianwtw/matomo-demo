@@ -1,6 +1,17 @@
 import React, {useEffect} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
-import {Helmet} from "react-helmet";
+
+function DynamicAnalytics(props){
+	let location = useLocation();
+
+	useEffect(() => {
+		document.title = props.title;
+		console.log('Dynamic route change: ', props.title);
+		window._paq.push(['setDocumentTitle', props.title]);
+		window._paq.push(['trackPageView']);
+
+	}, [location, props.title]);
+}
 
 function Navigation(){
 	return <nav>
@@ -11,22 +22,12 @@ function Navigation(){
 	</nav>
 }
 
-const Layout = (props) =>{
-	let location = useLocation();
-	let pageTitle = `${props.title} - Matomo Demo`;
-
-	useEffect(() => {
-		console.log('New page view with title');
-		window._paq.push(['setDocumentTitle', pageTitle]);
-	}, [location, pageTitle]);
-
+function Layout(props){
 	return (
 		<div className="App">
-			<Helmet>
-				<title>{pageTitle}</title>
-			</Helmet>
+			<DynamicAnalytics title={props.title}/>
+			<Navigation />
 			<header className="App-header">
-				<Navigation />
 				{props.children}
 			</header>
 		</div>

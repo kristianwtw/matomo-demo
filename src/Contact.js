@@ -24,7 +24,7 @@ function ContactForm(){
 }
 
 export default function Contact(){
-	return <Layout title="Contact">
+	return <Layout title="Contact - Matomo Demo">
 		<h1>Contact Us</h1>
 		<ContactForm />
 	</Layout>

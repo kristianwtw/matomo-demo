@@ -38,10 +38,15 @@ code {
 
 nav{
     color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
 }
 
 nav ul{
-    display: flex;
+    display: inline-flex;
     column-gap: 20px;
     list-style: none;
     padding: 0;
