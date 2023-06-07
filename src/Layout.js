@@ -6,7 +6,7 @@ function Navigation(){
 	return <nav>
 		<ul>
 			<li><NavLink to="/">Home</NavLink></li>
-			<li><NavLink to="/contact">Contact</NavLink></li>
+			<li><a href="matomo-demo/contact.html">Contact</a></li>
 			<li>
 				<NavLink to="/profile/details">Profile</NavLink>
 				<ul>
