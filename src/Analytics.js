@@ -6,7 +6,7 @@ export default function WithAnalytics(props){
 
 	useEffect(() => {
 		document.title = props.title;
-		console.log('Dynamic route change: ', props.title);
+		console.log('Dynamic page change: ', props.title);
 		window._mtm.push({"event": "dynamic-page-load"});
 
 	}, [location, props.title]);
