@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/matomo-demo/static/css/main.d281f1d3.css",
-    "main.js": "/matomo-demo/static/js/main.62aa1e3c.js",
+    "main.js": "/matomo-demo/static/js/main.f8905357.js",
     "index.html": "/matomo-demo/index.html",
     "main.d281f1d3.css.map": "/matomo-demo/static/css/main.d281f1d3.css.map",
-    "main.62aa1e3c.js.map": "/matomo-demo/static/js/main.62aa1e3c.js.map"
+    "main.f8905357.js.map": "/matomo-demo/static/js/main.f8905357.js.map"
   },
   "entrypoints": [
     "static/css/main.d281f1d3.css",
-    "static/js/main.62aa1e3c.js"
+    "static/js/main.f8905357.js"
   ]
 }
